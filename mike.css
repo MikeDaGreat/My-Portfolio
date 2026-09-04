@@ -1369,6 +1369,7 @@ button {
 }
 
 
+
 /* =========================================================
    FOOTER
    ========================================================= */
@@ -2023,3 +2024,253 @@ button:focus-visible {
 
 }
 
+/* =========================================================
+   PORTFOLIO V2 — PROJECT REFINEMENTS
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   HOMECORE PROJECT PREVIEW
+--------------------------------------------------------- */
+
+.homecore-project-image {
+  position: relative;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(96, 165, 250, 0.25),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #07121f,
+      #122438
+    );
+}
+
+
+.project-ui-preview {
+  width: 72%;
+  padding: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  backdrop-filter: blur(10px);
+
+  color: white;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+
+.project-ui-preview > span {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: #f0c27b;
+
+  font-size: 0.65rem;
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+
+.project-ui-preview strong {
+  display: block;
+
+  font-family:
+    Manrope,
+    sans-serif;
+
+  font-size: 1.6rem;
+  line-height: 1.05;
+}
+
+
+.project-ui-preview em {
+  color: #f0c27b;
+  font-style: normal;
+}
+
+
+.project-ui-button {
+  display: inline-block;
+
+  margin-top: 22px;
+  padding: 9px 13px;
+
+  background: #d99032;
+  color: #0b1726;
+
+  border-radius: 6px;
+
+  font-size: 0.65rem;
+  font-weight: 800;
+
+  letter-spacing: 0.02em;
+}
+
+
+/* ---------------------------------------------------------
+   PROJECT CARD IMPROVEMENTS
+--------------------------------------------------------- */
+
+.project-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.project-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.09);
+}
+
+
+.project-link {
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.project-link:hover {
+  transform: translateX(3px);
+}
+
+
+/* ---------------------------------------------------------
+   FREELANCE CARD REFINEMENT
+--------------------------------------------------------- */
+
+.freelance-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.freelance-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ---------------------------------------------------------
+   SCROLL REVEAL
+--------------------------------------------------------- */
+
+.reveal {
+  opacity: 0;
+
+  transform:
+    translateY(24px);
+
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+
+
+.reveal.revealed {
+  opacity: 1;
+
+  transform:
+    translateY(0);
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE NAVIGATION
+--------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+  .nav-links {
+    opacity: 0;
+    visibility: hidden;
+
+    transform:
+      translateY(-10px);
+
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      visibility 0.25s ease;
+  }
+
+
+  .nav-links.is-open {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+      translateY(0);
+  }
+
+
+  .homecore-project-image {
+    min-height: 240px;
+  }
+
+
+  .project-ui-preview {
+    width: 82%;
+    padding: 22px;
+  }
+
+
+  .project-ui-preview strong {
+    font-size: 1.35rem;
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   SMALL MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 480px) {
+
+  .homecore-project-image {
+    min-height: 220px;
+  }
+
+
+  .project-ui-preview {
+    width: 86%;
+    padding: 20px;
+  }
+
+
+  .project-ui-preview > span {
+    font-size: 0.55rem;
+  }
+
+
+  .project-ui-preview strong {
+    font-size: 1.2rem;
+  }
+
+}
